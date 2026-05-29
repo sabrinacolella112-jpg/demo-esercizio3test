@@ -14,11 +14,11 @@ public class EntitySalary {
 
     @OneToOne
     @JoinColumn(name = "user_id")
-    private User user;
+    private EntityUser user;
 
   public EntitySalary(){}
 
-    public EntitySalary(Double amount, User user) {
+    public EntitySalary(Double amount, EntityUser user) {
         this.amount = amount;
         this.user = user;
     }
@@ -27,9 +27,7 @@ public class EntitySalary {
         return id;
     }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+
 
     public Double getAmount() {
         return amount;
@@ -39,11 +37,11 @@ public class EntitySalary {
         this.amount = amount;
     }
 
-    public User getUser() {
+    public EntityUser getUser() {
         return user;
     }
 
-    public void setUser(User user) {
+    public void setUser(EntityUser user) {
         this.user = user;
     }
 }
